@@ -17,7 +17,7 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #485664;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0ea2bd;
+  --accent-color: #FEAAAA;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -29,7 +29,7 @@
 :root {
   --nav-color: #485664;
   /* The default color of the main navmenu links */
-  --nav-hover-color: #0ea2bd;
+  --nav-hover-color: #FEAAAA;
   /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff;
   /* Used as the background color for mobile navigation menu */
@@ -37,7 +37,7 @@
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #485664;
   /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0ea2bd;
+  --nav-dropdown-hover-color: #FEAAAA;
   /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -71,13 +71,13 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: #FEAAAA;
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, #FEAAAA, transparent 25%);
   text-decoration: none;
 }
 
@@ -230,7 +230,7 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #d99a9a24;
+  background-color: #3c3c3c75;
 }
 
 .header .logo {
@@ -291,7 +291,29 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  background-color: #3a3a3a;
+  background-color: #272727;
+}
+
+.header .navmenu li:hover>a,
+.header .navmenu .active,
+.header .navmenu .active:focus {
+  color: #fd6363;
+  font-weight: 600;
+}
+
+.scrolled .header .navmenu li:hover>a,
+.scrolled .header .navmenu .active,
+.scrolled .header .navmenu .active:focus {
+  color: #FEAAAA;
+  font-weight: 600;
+}
+
+.header .navmenu>ul>li>a:before {
+  background-color: #fd6363;
+}
+
+.scrolled .header .navmenu>ul>li>a:before {
+  background-color: #FEAAAA;
 }
 
 /*--------------------------------------------------------------
@@ -560,7 +582,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #272727;
   font-size: 14px;
   position: relative;
 }
@@ -856,19 +878,43 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+.banner {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  background-image: url(../../assets/img/about_us.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.banner-title {
+  color: #f4f4f4;
+  font-weight: 700;
+  padding-top: 5.5rem;
+}
+
+
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
 }
 
-.hero .carousel,
+/* .hero .carousel,
 .hero .carousel .carousel-inner,
 .hero .carousel .carousel-inner .carousel-item {
   height: 100vh;
-}
+} */
 
 .hero h1 {
   margin: 0 0 10px 0;
@@ -1064,8 +1110,7 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about {
-  background-image: url(../img/bg-2.jpg);
-  background-color: #ffffffce;
+  background-color: #f7f7f7;
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
@@ -1200,6 +1245,13 @@ section,
   font-size: 18px;
   margin-right: 8px;
   color: #777777;
+}
+
+.about .info {
+  background-color: var(--surface-color);
+  padding: 40px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------
