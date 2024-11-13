@@ -1647,6 +1647,8 @@ section,
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .services .details .icon {
   margin: 0;
   width: 72px;
@@ -1678,6 +1680,23 @@ section,
   line-height: 20px;
   font-size: 10px;
   margin-bottom: 0;
+}
+
+.services .details li {
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
+  line-height: 20px;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.services .details ul {
+  display: none;
+  transition: 0.6s;
+}
+
+.services .service-item:hover .details ul {
+  display: block;
+  transform: translateX(1.2);
 }
 
 .services .service-item:hover .details h4 {
@@ -1715,6 +1734,7 @@ section,
   .services p {
     font-size: 0.8rem !important;
   }
+
 }
 
 /*--------------------------------------------------------------
