@@ -230,7 +230,7 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: #3c3c3c75;
+  background-color: #ffffff;
 }
 
 .header .logo {
@@ -291,29 +291,29 @@ h6 {
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-  background-color: #272727;
+  background-color: #ffffff;
 }
 
 .header .navmenu li:hover>a,
 .header .navmenu .active,
 .header .navmenu .active:focus {
-  color: #fd6363;
+  color: #064789;
   font-weight: 600;
 }
 
 .scrolled .header .navmenu li:hover>a,
 .scrolled .header .navmenu .active,
 .scrolled .header .navmenu .active:focus {
-  color: #FEAAAA;
+  color: #064789;
   font-weight: 600;
 }
 
 .header .navmenu>ul>li>a:before {
-  background-color: #fd6363;
+  background-color: #064789;
 }
 
 .scrolled .header .navmenu>ul>li>a:before {
-  background-color: #FEAAAA;
+  background-color: #064789;
 }
 
 /*--------------------------------------------------------------
@@ -348,7 +348,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #dcdcdc;
+    color: #064789;
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -906,15 +906,33 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  /* height: 100vh; */
+  height: 95vh;
   position: relative;
 }
 
-/* .hero .carousel,
+.hero .carousel,
 .hero .carousel .carousel-inner,
 .hero .carousel .carousel-inner .carousel-item {
   height: 100vh;
-} */
+  text-align: center;
+
+}
+
+.hero .carousel .carousel-inner .carousel-item div {
+  padding-top: 10rem;
+}
+
+.hero .carousel .carousel-inner .carousel-item h6 {
+  font-size: 25px;
+  font-weight: 400;
+  color: #d8d8d8;
+}
+
+.hero .carousel .carousel-inner .carousel-item h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #d8d8d8;
+}
 
 .hero h1 {
   margin: 0 0 10px 0;
